@@ -74,7 +74,7 @@ export default function ExplorePrompt() {
     <section className="max-w-screen-xl mx-auto py-20 px-2">
       <h3 className="font-semibold text-2xl">Explore Prompts</h3>
       <div>
-        <Tabs defaultValue="account" className="">
+        <Tabs defaultValue="All" className="">
           <TabsList className="my-5 flex justify-normal gap-3 flex-wrap h-fit">
             <TabsTrigger value="All">All</TabsTrigger>
             <TabsTrigger value="Marketing">Marketing</TabsTrigger>
