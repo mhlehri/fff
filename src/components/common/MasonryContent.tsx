@@ -1,9 +1,9 @@
 "use client";
-import React, { useState } from "react";
+import { X } from "lucide-react";
+import Image from "next/image";
+import { useState } from "react";
 import Masonry from "react-masonry-css";
 import { Button } from "../ui/button";
-import Image from "next/image";
-import { X } from "lucide-react";
 
 type Image = {
   id: number;
@@ -24,8 +24,7 @@ export default function MasonryContent({ images }: { images: Image }) {
   return (
     <Masonry
       breakpointCols={breakpointColumns}
-      className="my-masonry-grid flex w-full gap-5 select-none"
-      columnClassName="my-masonry-grid_column"
+      className="flex w-full gap-5 select-none"
     >
       {images.map((image, index) => (
         <div key={image.id} className="min-w-full relative group mb-5">
@@ -42,9 +41,7 @@ export default function MasonryContent({ images }: { images: Image }) {
           />
 
           {/* Modal */}
-
           <div
-            // onClick={() => cur === index + 1 && setOpenModal(false)}
             className={`fixed flex justify-center items-center z-[100] ${
               cur === index + 1 && openModal
                 ? "visible opacity-1"
